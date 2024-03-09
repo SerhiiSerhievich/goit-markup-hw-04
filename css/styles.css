@@ -387,10 +387,6 @@ body {
     fill: var(--icon-color);
 }
 
-.regular-customer-icon {
-    width: 106px;
-    height: 60px;
-}
 
 .regular-customers-link:hover, .regular-customers-link:focus {
     border-color: var(--hover-color);
