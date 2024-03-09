@@ -7,6 +7,7 @@
     --hover-color: #2196F3;
     --button-first-color: #2196F3;
     --button-second-color: #F5F4FA;
+    --icon-color: #AFB1B8;
     --first-lh: 1.71;
     --second-lh: 1.87;
 }
@@ -113,9 +114,23 @@ body {
     font-weight: 500;
     line-height: var(--first-lh);
     letter-spacing: 0.28px;
+    display: flex;
+    align-items: center;
 }
+
+.heder-icon {
+    margin-right: 10px;
+    fill: var(--icon-color);
+}
+
  .contacts-link:hover, .contacts-link:focus {
     color: var(--hover-color);
+ }
+
+ .contacts-link:hover .heder-icon,
+ .contacts-link:focus .heder-icon {
+     color: var(--hover-color);
+     fill: var(--hover-color);
  }
 
  .header-menu .menu-item .menu-link.current {
@@ -149,6 +164,8 @@ body {
         padding-top: 32px;
         padding-bottom: 32px;
  }
+ 
+
 /*--------------------------------------- hero -----------------------------------------------------*/
 
  .hero {
@@ -159,7 +176,9 @@ body {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1600px;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
  }
 
  .hero-title {
@@ -237,6 +256,9 @@ body {
     height: 120px;
     background-color: var(--second-color);
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*--------------------------------------- service -----------------------------------------------------*/
 
@@ -315,8 +337,23 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #188CE8;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--icon-color);
+}
+
+.team-soc-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.team-soc-link:hover, .team-soc-link:focus {
+  background-color: var(--hover-color);
+}
+
+.team-soc-link:hover .team-soc-icon {
+    fill: var(--main-color);
 }
 
 /*--------------------------------------- regular-customers -----------------------------------------------------*/
@@ -329,20 +366,41 @@ body {
 .regular-customers-list {
     margin-top: 50px;
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
 .regular-customers-item {
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
     width: 170px;
     height: 92px;
 }
 
 .regular-customers-link {
-
+    width: 100%;
+    height: 100%;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--icon-color);
 }
+
+.regular-customer-icon {
+    width: 106px;
+    height: 60px;
+}
+
+.regular-customers-link:hover, .regular-customers-link:focus {
+    border-color: var(--hover-color);
+}
+
+.regular-customers-link:hover .regular-customer-icon,
+.regular-customers-link:focus .regular-customer-icon {
+    fill: var(--hover-color);
+}
+
 /*--------------------------------------- footer -----------------------------------------------------*/
 .footer {
     background-color: var(--first-color);
@@ -375,15 +433,67 @@ body {
     margin-top: 9px;
 }
 
-.contacts-item:first-child {
+.contacts-item-footer:first-child {
     margin-bottom: 9px;
 }
+
+
+
+.footer-soc-title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.footer-soc-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-soc-item {
+    width: 44px;
+    height: 44px;
+}
+
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--main-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-soc-link:hover, .footer-soc-link:focus {
+    background-color: var(--hover-color);
+}
+
+.footer-wrap {
+    display: flex;
+    gap: 94px;
+    align-items: baseline;
+}
+
 /* ********************************************** PORTFOLIO ****************************************************** */
 
 .portfolio {
     padding-top: 94px;
     padding-bottom: 94px;
 }
+
 .portfolio-filtr {
     margin-bottom: 50px;
     display: flex;
@@ -411,6 +521,7 @@ body {
 .filtr-button:hover, .filtr-button:focus {
     background-color: var(--hover-color);
     color: var(--main-color);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item-title {
