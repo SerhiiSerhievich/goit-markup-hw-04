@@ -120,7 +120,7 @@ body {
 
 .heder-icon {
     margin-right: 10px;
-    fill: var(--icon-color);
+    fill: currentColor;
 }
 
  .contacts-link:hover, .contacts-link:focus {
@@ -352,7 +352,7 @@ body {
   background-color: var(--hover-color);
 }
 
-.team-soc-link:hover .team-soc-icon {
+.team-soc-link:hover .team-soc-icon, .team-soc-link:focus .team-soc-icon {
     fill: var(--main-color);
 }
 
@@ -385,6 +385,7 @@ body {
     align-items: center;
     justify-content: center;
     fill: var(--icon-color);
+    outline: none;
 }
 
 
@@ -395,6 +396,7 @@ body {
 .regular-customers-link:hover .regular-customer-icon,
 .regular-customers-link:focus .regular-customer-icon {
     fill: var(--hover-color);
+    border-color: var(--hover-color);
 }
 
 /*--------------------------------------- footer -----------------------------------------------------*/
@@ -435,7 +437,7 @@ body {
 
 
 
-.footer-soc-title {
+.footer-soc-text {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 14px;
@@ -479,10 +481,12 @@ body {
 
 .footer-wrap {
     display: flex;
-    gap: 94px;
     align-items: baseline;
 }
 
+.footer-soc {
+    margin-left: 94px;
+}
 /* ********************************************** PORTFOLIO ****************************************************** */
 
 .portfolio {
@@ -548,7 +552,11 @@ body {
     width: 370px;
 }
 
-.portfolio-item:hover, .portfolio-item:focus {
+.portfolio-link {
+    display: block;
+}
+
+.portfolio-link:hover, .portfolio-link:focus {
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
